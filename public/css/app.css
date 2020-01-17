@@ -11378,7 +11378,7 @@ body {
 
 .sidebar li {
   padding-left: 10px;
-  color: #333 !important;
+  color: #333;
 }
 
 .sidebar li:hover {
@@ -11386,16 +11386,20 @@ body {
 }
 
 .sidebar li a {
-  font-weight: 600 !important;
-  padding-left: 5px !important;
-  color: #333 !important;
+  font-weight: 600;
+  padding-left: 5px;
+  color: #333;
 }
 
 .sidebar li a .sidebarIcon {
   margin-right: 0.5rem;
 }
 
+.sidebar li .active {
+  color: #29f !important;
+}
+
 .sidebar h6 {
-  padding-left: 0.5rem !important;
+  padding-left: 0.5rem;
 }
 

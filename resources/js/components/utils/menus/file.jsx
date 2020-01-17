@@ -5,7 +5,17 @@ class fileMenu extends Component {
         return (
             <React.Fragment>
                 <li className="nav-item">
-                    <a className="nav-link active" href="#">
+                    <a
+                        href="#"
+                        className={
+                            this.props.activeValue === "File"
+                                ? "nav-link active"
+                                : "nav-link"
+                        }
+                        onClick={() => {
+                            this.props.setActive("File");
+                        }}
+                    >
                         <i className="sidebarIcon fas fa-file"></i>
                         &nbsp;Records
                     </a>

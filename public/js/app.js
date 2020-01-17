@@ -78582,11 +78582,16 @@ function (_Component) {
   _createClass(CategoryMenu, [{
     key: "render",
     value: function render() {
+      var _this = this;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "nav-link active",
-        href: "#"
+        href: "#",
+        className: this.props.activeValue === "Category" ? "nav-link active" : "nav-link",
+        onClick: function onClick() {
+          _this.props.setActive("Category");
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "sidebarIcon fas fa-list-alt"
       }), "Category")));
@@ -78636,23 +78641,28 @@ var dashboard =
 function (_Component) {
   _inherits(dashboard, _Component);
 
-  function dashboard() {
+  function dashboard(props) {
     _classCallCheck(this, dashboard);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(dashboard).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(dashboard).call(this, props));
   }
 
   _createClass(dashboard, [{
     key: "render",
     value: function render() {
+      var _this = this;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "nav-link active",
-        href: "#"
+        href: "/home",
+        className: this.props.activeValue === "Dashboard" ? "nav-link active" : "nav-link",
+        onClick: function onClick() {
+          _this.props.setActive("Dashboard");
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "sidebarIcon fas fa-tachometer-alt"
-      }), "Dashboard ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      }), "Dashboard", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "sr-only"
       }, "(current)"))));
     }
@@ -78710,11 +78720,16 @@ function (_Component) {
   _createClass(fileMenu, [{
     key: "render",
     value: function render() {
+      var _this = this;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "nav-link active",
-        href: "#"
+        href: "#",
+        className: this.props.activeValue === "File" ? "nav-link active" : "nav-link",
+        onClick: function onClick() {
+          _this.props.setActive("File");
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "sidebarIcon fas fa-file"
       }), "\xA0Records")));
@@ -78773,11 +78788,16 @@ function (_Component) {
   _createClass(ProgramMenu, [{
     key: "render",
     value: function render() {
+      var _this = this;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "nav-link",
-        href: "#"
+        href: "#",
+        className: this.props.activeValue === "Program" ? "nav-link active" : "nav-link",
+        onClick: function onClick() {
+          _this.props.setActive("Program");
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "sidebarIcon fas fa-cogs"
       }), "Program Settings")));
@@ -78836,11 +78856,16 @@ function (_Component) {
   _createClass(ReportsMenu, [{
     key: "render",
     value: function render() {
+      var _this = this;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "nav-link active",
-        href: "#"
+        href: "#",
+        className: this.props.activeValue === "ReportMenu" ? "nav-link active" : "nav-link",
+        onClick: function onClick() {
+          _this.props.setActive("ReportMenu");
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "sidebarIcon fas fa-print"
       }), "Reports")));
@@ -78899,11 +78924,16 @@ function (_Component) {
   _createClass(UserMenu, [{
     key: "render",
     value: function render() {
+      var _this = this;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "nav-link active",
-        href: "#"
+        href: "#",
+        className: this.props.activeValue === "Users" ? "nav-link active" : "nav-link",
+        onClick: function onClick() {
+          _this.props.setActive("Users");
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "sidebarIcon fas fa-users"
       }), "Users")));
@@ -79024,9 +79054,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -79051,8 +79081,11 @@ function (_Component) {
     _classCallCheck(this, sidebar);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(sidebar).call(this, props));
+
+    _initialiseProps.call(_assertThisInitialized(_this));
+
     _this.state = {
-      count: 0
+      activeTabClassName: "111"
     };
     return _this;
   }
@@ -79068,19 +79101,51 @@ function (_Component) {
         className: "sidebar-sticky"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "nav flex-column mt-2"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_menus_dashboard__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_menus_file__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_menus_reports__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_menus_dashboard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        setActive: this.clickActive,
+        activeValue: this.state.activeTabClassName
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_menus_file__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        setActive: this.clickActive,
+        activeValue: this.state.activeTabClassName
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_menus_reports__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        setActive: this.clickActive,
+        activeValue: this.state.activeTabClassName
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
         className: "sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "System Settings"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "d-flex align-items-center text-muted",
         href: "#"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "nav flex-column mt-2"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_menus_users__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_menus_category__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_menus_program_settings__WEBPACK_IMPORTED_MODULE_6__["default"], null)))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_menus_users__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        setActive: this.clickActive,
+        activeValue: this.state.activeTabClassName
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_menus_category__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        setActive: this.clickActive,
+        activeValue: this.state.activeTabClassName
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_menus_program_settings__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        setActive: this.clickActive,
+        activeValue: this.state.activeTabClassName
+      })))));
     }
   }]);
 
   return sidebar;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+var _initialiseProps = function _initialiseProps() {
+  var _this2 = this;
+
+  Object.defineProperty(this, "clickActive", {
+    enumerable: true,
+    writable: true,
+    value: function value(props) {
+      _this2.setState({
+        activeTabClassName: props
+      });
+    }
+  });
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (sidebar);
 

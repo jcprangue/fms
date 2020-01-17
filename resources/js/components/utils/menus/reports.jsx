@@ -5,7 +5,17 @@ class ReportsMenu extends Component {
         return (
             <React.Fragment>
                 <li className="nav-item">
-                    <a className="nav-link active" href="#">
+                    <a
+                        href="#"
+                        className={
+                            this.props.activeValue === "ReportMenu"
+                                ? "nav-link active"
+                                : "nav-link"
+                        }
+                        onClick={() => {
+                            this.props.setActive("ReportMenu");
+                        }}
+                    >
                         <i className="sidebarIcon fas fa-print"></i>
                         Reports
                     </a>

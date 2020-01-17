@@ -10,7 +10,7 @@ class sidebar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            count: 0
+            activeTabClassName: "111"
         };
     }
     render() {
@@ -20,9 +20,18 @@ class sidebar extends Component {
                     <nav className="col-md-2 d-none d-md-block bg-light sidebar border-right px-0">
                         <div className="sidebar-sticky"></div>
                         <ul className="nav flex-column mt-2">
-                            <DashBoard />
-                            <File />
-                            <Reports />
+                            <DashBoard
+                                setActive={this.clickActive}
+                                activeValue={this.state.activeTabClassName}
+                            />
+                            <File
+                                setActive={this.clickActive}
+                                activeValue={this.state.activeTabClassName}
+                            />
+                            <Reports
+                                setActive={this.clickActive}
+                                activeValue={this.state.activeTabClassName}
+                            />
                         </ul>
 
                         <h6 className="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
@@ -33,15 +42,27 @@ class sidebar extends Component {
                             ></a>
                         </h6>
                         <ul className="nav flex-column mt-2">
-                            <Users />
-                            <Category />
-                            <ProgramSettings />
+                            <Users
+                                setActive={this.clickActive}
+                                activeValue={this.state.activeTabClassName}
+                            />
+                            <Category
+                                setActive={this.clickActive}
+                                activeValue={this.state.activeTabClassName}
+                            />
+                            <ProgramSettings
+                                setActive={this.clickActive}
+                                activeValue={this.state.activeTabClassName}
+                            />
                         </ul>
                     </nav>
                 </div>
             </React.Fragment>
         );
     }
+    clickActive = props => {
+        this.setState({ activeTabClassName: props });
+    };
 }
 
 export default sidebar;

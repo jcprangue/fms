@@ -5,7 +5,17 @@ class ProgramMenu extends Component {
         return (
             <React.Fragment>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <a
+                        href="#"
+                        className={
+                            this.props.activeValue === "Program"
+                                ? "nav-link active"
+                                : "nav-link"
+                        }
+                        onClick={() => {
+                            this.props.setActive("Program");
+                        }}
+                    >
                         <i className="sidebarIcon fas fa-cogs"></i>
                         Program Settings
                     </a>
