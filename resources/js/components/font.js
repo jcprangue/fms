@@ -5,9 +5,12 @@ import {
     faPrint,
     faUsers,
     faListAlt,
-    faCogs
+    faCogs,
+    faPlusSquare,
+    faPencilAlt,
+    faTrashAlt
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faTachometerAlt, faFile, faPrint, faUsers, faListAlt, faCogs);
+library.add(faTachometerAlt, faFile, faPrint, faUsers, faListAlt, faCogs, faPlusSquare, faPencilAlt, faTrashAlt);
 
 dom.watch();

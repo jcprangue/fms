@@ -1,10 +1,5 @@
 import React, { Component } from "react";
-import DashBoard from "./menus/dashboard";
-import File from "./menus/file";
-import Reports from "./menus/reports";
-import Users from "./menus/users";
-import Category from "./menus/category";
-import ProgramSettings from "./menus/program-settings";
+import { NavLink } from "react-router-dom";
 
 class sidebar extends Component {
     constructor(props) {
@@ -13,50 +8,58 @@ class sidebar extends Component {
             activeTabClassName: "111"
         };
     }
+
+
     render() {
         return (
             <React.Fragment>
-                <div className="sidebar row mt-5">
-                    <nav className="col-md-2 d-none d-md-block bg-light sidebar border-right px-0">
-                        <div className="sidebar-sticky"></div>
-                        <ul className="nav flex-column mt-2">
-                            <DashBoard
-                                setActive={this.clickActive}
-                                activeValue={this.state.activeTabClassName}
-                            />
-                            <File
-                                setActive={this.clickActive}
-                                activeValue={this.state.activeTabClassName}
-                            />
-                            <Reports
-                                setActive={this.clickActive}
-                                activeValue={this.state.activeTabClassName}
-                            />
+                <nav className="col-md-2 d-none d-md-block bg-light sidebar border-right">
+                    <div className="sidebar-sticky">
+                        <ul className="nav flex-column">
+                            <li className="nav-item">
+                                <NavLink to="/" className="nav-link"><i className="sidebarIcon fas fa-tachometer-alt"></i>Dashboard</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink to="/records" className="nav-link">
+                                    <i className="sidebarIcon fas fa-file"></i>
+                                    &nbsp;Records
+                                </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink to="/reports" className="nav-link">
+                                    <i className="sidebarIcon fas fa-print"></i>
+                                    Reports
+                                </NavLink>
+                            </li>
                         </ul>
 
-                        <h6 className="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <h6 className="sidebar-heading d-flex justify-content-between align-items-center mt-4 mb-1 text-muted">
                             <span>System Settings</span>
-                            <a
-                                className="d-flex align-items-center text-muted"
-                                href="#"
-                            ></a>
+                            <a className="d-flex align-items-center text-muted"></a>
                         </h6>
-                        <ul className="nav flex-column mt-2">
-                            <Users
-                                setActive={this.clickActive}
-                                activeValue={this.state.activeTabClassName}
-                            />
-                            <Category
-                                setActive={this.clickActive}
-                                activeValue={this.state.activeTabClassName}
-                            />
-                            <ProgramSettings
-                                setActive={this.clickActive}
-                                activeValue={this.state.activeTabClassName}
-                            />
+
+                        <ul className="nav flex-column mb-2">
+                            <li className="nav-item">
+                                <NavLink to="/users" className="nav-link">
+                                    <i className="sidebarIcon fas fa-users"></i>
+                                    Users
+                                </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink to="/category" className="nav-link">
+                                    <i className="sidebarIcon fas fa-list-alt"></i>
+                                    Category
+                                </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink to="/settings" className="nav-link ">
+                                    <i className="sidebarIcon fas fa-cogs"></i>
+                                    Program Settings
+                                </NavLink>
+                            </li>
                         </ul>
-                    </nav>
-                </div>
+                    </div>
+                </nav>
             </React.Fragment>
         );
     }

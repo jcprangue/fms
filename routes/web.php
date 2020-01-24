@@ -11,10 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/fms/users', 'User\UserController@getAllUsers')->name('User-List');
+Route::get('/fms/delete/{id}', 'User\UserController@deleteUser')->name('Delete-User');
+// Route::get('/fms/users', function () {
+//     return json_encode(['name' => 'asds']);
+// })->name('User-List');
+
+
+
+
+Route::get('/{path?}', function () {
+    return view('home');
+})->where('path', '.*');

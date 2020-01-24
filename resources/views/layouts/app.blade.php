@@ -24,12 +24,9 @@
 
 <body>
     <div id="app">
-        <div class="container-fluid">
 
-            <main>
-                @yield('content')
-            </main>
-        </div>
+        @yield('content')
+
     </div>
 </body>
 
